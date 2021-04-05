@@ -6,7 +6,7 @@
       <div class="container-fluid">
         <div class="owl-banner owl-carousel">
           <div class="item">
-            <img src="assets/images/banner-item-01.jpg" alt="">
+            <img src="<?php echo get_template_directory_uri() ?>/assets/images/banner-item-01.jpg" alt="">
             <div class="item-content">
               <div class="main-content">
                 <div class="meta-category">
@@ -22,7 +22,7 @@
             </div>
           </div>
           <div class="item">
-            <img src="assets/images/banner-item-02.jpg" alt="">
+            <img src="<?php echo get_template_directory_uri() ?>/assets/images/banner-item-02.jpg" alt="">
             <div class="item-content">
               <div class="main-content">
                 <div class="meta-category">
@@ -38,7 +38,7 @@
             </div>
           </div>
           <div class="item">
-            <img src="assets/images/banner-item-03.jpg" alt="">
+            <img src="<?php echo get_template_directory_uri() ?>/assets/images/banner-item-03.jpg" alt="">
             <div class="item-content">
               <div class="main-content">
                 <div class="meta-category">
@@ -54,7 +54,7 @@
             </div>
           </div>
           <div class="item">
-            <img src="assets/images/banner-item-04.jpg" alt="">
+            <img src="<?php echo get_template_directory_uri() ?>/assets/images/banner-item-04.jpg" alt="">
             <div class="item-content">
               <div class="main-content">
                 <div class="meta-category">
@@ -70,7 +70,7 @@
             </div>
           </div>
           <div class="item">
-            <img src="assets/images/banner-item-05.jpg" alt="">
+            <img src="<?php echo get_template_directory_uri() ?>/assets/images/banner-item-05.jpg" alt="">
             <div class="item-content">
               <div class="main-content">
                 <div class="meta-category">
@@ -86,7 +86,7 @@
             </div>
           </div>
           <div class="item">
-            <img src="assets/images/banner-item-06.jpg" alt="">
+            <img src="<?php echo get_template_directory_uri() ?>/assets/images/banner-item-06.jpg" alt="">
             <div class="item-content">
               <div class="main-content">
                 <div class="meta-category">
@@ -138,7 +138,7 @@
                 <div class="col-lg-12">
                   <div class="blog-post">
                     <div class="blog-thumb">
-                      <img src="assets/images/blog-post-01.jpg" alt="">
+                      <img src="<?php echo get_template_directory_uri() ?>/assets/images/blog-post-01.jpg" alt="">
                     </div>
                     <div class="down-content">
                       <span>Lifestyle</span>
@@ -173,7 +173,7 @@
                 <div class="col-lg-12">
                   <div class="blog-post">
                     <div class="blog-thumb">
-                      <img src="assets/images/blog-post-02.jpg" alt="">
+                      <img src="<?php echo get_template_directory_uri() ?>/assets/images/blog-post-02.jpg" alt="">
                     </div>
                     <div class="down-content">
                       <span>Healthy</span>
@@ -208,7 +208,7 @@
                 <div class="col-lg-12">
                   <div class="blog-post">
                     <div class="blog-thumb">
-                      <img src="assets/images/blog-post-03.jpg" alt="">
+                      <img src="<?php echo get_template_directory_uri() ?>/assets/images/blog-post-03.jpg" alt="">
                     </div>
                     <div class="down-content">
                       <span>Fashion</span>
