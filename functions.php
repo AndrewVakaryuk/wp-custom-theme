@@ -1,5 +1,26 @@
 <?php
 
+if (!defined('_S_VERSION')) {
+    define('_S_VERSION', '1.0.0');
+}
+
+if (!function_exists('my_theme_setup')) :
+    function my_theme_setup()
+    {
+      load_theme_textdomain('my_theme', get_template_directory() . '/languages');
+      load_theme_textdomain('wplesson', get_template_directory() . '/languages');
+        add_theme_support('title-tag');
+        add_theme_support('post-thumbnails');
+
+        register_nav_menus(
+            array(
+                'header-menu' => esc_html__('Primary', 'my_theme'),
+            )
+        );
+    }
+endif;
+add_action('after_setup_theme', 'my_theme_setup');
+
 function my_theme_scripts()
 {
      wp_enqueue_style(
@@ -23,7 +44,7 @@ function my_theme_scripts()
         'bootstrap',
         get_template_directory_uri() . '/vendor/bootstrap/js/bootstrap.bundle.min.js',
         array('jquery'),
-        '1.0.0',
+        _S_VERSION,
         true
     );
 
@@ -31,7 +52,7 @@ function my_theme_scripts()
         'owl',
         get_template_directory_uri() . '/assets/js/owl.js',
         array('jquery'),
-        '1.0.0',
+        _S_VERSION,
         true
     );
 
@@ -39,7 +60,7 @@ function my_theme_scripts()
         'slick',
         get_template_directory_uri() . '/assets/js/slick.js',
         array('jquery'),
-        '1.0.0',
+        _S_VERSION,
         true
     );
 
@@ -47,7 +68,7 @@ function my_theme_scripts()
         'isotope',
         get_template_directory_uri() . '/assets/js/isotope.js',
         array('jquery'),
-        '1.0.0',
+        _S_VERSION,
         true
     );
 
@@ -55,7 +76,7 @@ function my_theme_scripts()
         'accordions',
         get_template_directory_uri() . '/assets/js/accordions.js',
         array('jquery'),
-        '1.0.0',
+        _S_VERSION,
         true
     );
 
@@ -63,9 +84,33 @@ function my_theme_scripts()
         'custom',
         get_template_directory_uri() . '/assets/js/custom.js',
         array('jquery'),
-        '1.0.0',
+        _S_VERSION,
         true
     );
 }
 
 add_action('wp_enqueue_scripts', 'my_theme_scripts');
+
+function special_nav_class($classes, $item)
+{
+    if (in_array('current-menu-item', $classes)) {
+        $classes[] = 'active ';
+    }
+
+    return $classes;
+}
+
+add_filter('nav_menu_css_class', 'special_nav_class', 10, 2);
+
+function atg_menu_classes($classes, $item, $args) {
+  if($args->theme_location == 'topnav') {
+    $classes[] = 'nav-link';
+  }
+  return $classes;
+}
+add_filter('nav_menu_css_class', 'atg_menu_classes', 1, 3);
+
+function add_menuclass($ulclass) {
+   return preg_replace('/<a /', '<a class="nav-link"', $ulclass);
+}
+add_filter('wp_nav_menu','add_menuclass');

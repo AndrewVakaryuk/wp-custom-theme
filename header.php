@@ -1,3 +1,5 @@
+<?php /** Header */ ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -41,7 +43,17 @@ https://templatemo.com/tm-551-stand-blog
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
+
           <div class="collapse navbar-collapse" id="navbarResponsive">
+          <?php wp_nav_menu( 
+            array(
+              'theme_location' => 'header-menu',
+              'menu_class'     => 'navbar-nav ml-auto',
+              'container'      => 'nav'
+            )
+           ) ?>
+           </div>
+          <!-- <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item active">
                 <a class="nav-link" href="index.html">Home
@@ -61,7 +73,7 @@ https://templatemo.com/tm-551-stand-blog
                 <a class="nav-link" href="contact.html">Contact Us</a>
               </li>
             </ul>
-          </div>
+          </div> -->
         </div>
       </nav>
     </header>
