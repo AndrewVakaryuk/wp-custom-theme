@@ -49,7 +49,8 @@ https://templatemo.com/tm-551-stand-blog
             array(
               'theme_location' => 'header-menu',
               'menu_class'     => 'navbar-nav ml-auto',
-              'container'      => 'nav'
+              'container'      => 'nav',
+              'link_class'     => 'nav-link'
             )
            ) ?>
            </div>
