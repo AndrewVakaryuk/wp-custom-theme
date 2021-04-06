@@ -8,7 +8,6 @@ if (!function_exists('my_theme_setup')) :
     function my_theme_setup()
     {
       load_theme_textdomain('my_theme', get_template_directory() . '/languages');
-      load_theme_textdomain('wplesson', get_template_directory() . '/languages');
         add_theme_support('title-tag');
         add_theme_support('post-thumbnails');
 
