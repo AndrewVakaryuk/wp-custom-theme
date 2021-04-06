@@ -253,9 +253,7 @@
               <div class="row">
                 <div class="col-lg-12">
                   <div class="sidebar-item search">
-                    <form id="search_form" name="gs" method="GET" action="#">
-                      <input type="text" name="q" class="searchText" placeholder="type to search..." autocomplete="on">
-                    </form>
+                    <?php get_search_form() ?>
                   </div>
                 </div>
                 <div class="col-lg-12">
