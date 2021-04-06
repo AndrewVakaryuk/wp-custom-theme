@@ -22,7 +22,7 @@
           ?>
         </a></li>
       </ul>
-      <?php the_excerpt(); ?>
+      <?php the_excerpt('<p>', '</p>'); ?>
       <div class="post-options">
         <div class="row">
           <div class="col-6">

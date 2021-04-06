@@ -735,7 +735,7 @@ ul.page-numbers li a:hover {
 	border-bottom: none;
 }
 
-.sidebar .recent-posts ul li h5 {
+.sidebar .recent-posts ul li a {
 	font-size: 19px;
 	font-weight: 900;
 	color: #20232e;
@@ -743,7 +743,7 @@ ul.page-numbers li a:hover {
 	transition: all 0.3s;
 }
 
-.sidebar .recent-posts ul li h5:hover {
+.sidebar .recent-posts ul li a:hover {
 	color: #f48840;
 }
 
@@ -773,17 +773,21 @@ ul.page-numbers li a:hover {
 	color: #f48840;
 }
 
-.sidebar .tags ul li {
+/* .sidebar .tagcloud {
+  background-color: #000;
+} */
+
+.sidebar .tags div {
 	margin-right: 6px;
 	display: inline-block;
 }
 
-.sidebar .tags ul li {
+.sidebar .tags a {
 	margin-bottom: 10px;
 }
 
-.sidebar .tags ul li a {
-	font-size: 15px;
+.sidebar .tags div a {
+	font-size: 15px !important;
 	font-weight: 500;
 	color: #aaa;
 	display: inline-block;
@@ -792,7 +796,7 @@ ul.page-numbers li a:hover {
 	transition: all .3s;
 }
 
-.sidebar .tags ul li a:hover {
+.sidebar .tags div a:hover {
 	background-color: #f48840;
 	border-color: #f48840;
 	color: #fff;

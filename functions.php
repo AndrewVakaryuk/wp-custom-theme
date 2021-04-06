@@ -10,6 +10,7 @@ if (!function_exists('my_theme_setup')) :
       load_theme_textdomain('my_theme', get_template_directory() . '/languages');
         add_theme_support('title-tag');
         add_theme_support('post-thumbnails');
+        add_theme_support('customize-selective-refresh-widgets');
 
         register_nav_menus(
             array(
@@ -87,8 +88,61 @@ function my_theme_scripts()
         true
     );
 }
-
 add_action('wp_enqueue_scripts', 'my_theme_scripts');
+
+
+function my_theme_widgets_init()
+{
+    register_sidebar(
+        array(
+            'name' => esc_html__('Sidebar-search', 'my_theme'),
+            'id' => 'sidebar-search',
+            'description' => esc_html__('Add widgets here.', 'my_theme'),
+            'before_widget' => '<div class="col-lg-12"><div class="sidebar-item search">',
+            'after_widget' => '</div></div>',
+            // 'before_title' => '<hr class="mb-3 tm-hr-primary"><h2 class="mb-4 tm-post-title tm-color-primary">',
+            // 'after_title' => '</h2>',
+        )
+    );
+
+    register_sidebar(
+        array(
+            'name' => esc_html__('Sidebar-recent', 'my_theme'),
+            'id' => 'sidebar-recent',
+            'description' => esc_html__('Add widgets here.', 'my_theme'),
+            'before_widget' => '<div class="col-lg-12"><div class="sidebar-item recent-posts">',
+            'after_widget' => '</div></div>',
+            'before_title' => '<div class="sidebar-heading"><h2>',
+            'after_title' => '</h2></div>'
+        )
+    );
+
+    register_sidebar(
+        array(
+            'name' => esc_html__('Sidebar-categories', 'my_theme'),
+            'id' => 'sidebar-categories',
+            'description' => esc_html__('Add widgets here.', 'my_theme'),
+            'before_widget' => '<div class="col-lg-12"><div class="sidebar-item categories">',
+            'after_widget' => '</div></div>',
+            'before_title' => '<div class="sidebar-heading"><h2>',
+            'after_title' => '</h2></div>'
+        )
+    );
+
+    register_sidebar(
+        array(
+            'name' => esc_html__('Sidebar-tags', 'my_theme'),
+            'id' => 'sidebar-tags',
+            'description' => esc_html__('Add widgets here.', 'my_theme'),
+            'before_widget' => '<div class="col-lg-12"><div class="sidebar-item tags">',
+            'after_widget' => '</div></div>',
+            'before_title' => '<div class="sidebar-heading"><h2>',
+            'after_title' => '</h2></div>'
+        )
+    );
+}
+add_action('widgets_init', 'my_theme_widgets_init');
+
 
 function special_nav_class($classes, $item)
 {
