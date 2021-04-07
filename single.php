@@ -2,21 +2,21 @@
 
 get_header();
 ?>
-    <!-- Banner Starts Here -->
-  <section class="page-heading">
-    <div class="container">
-      <div class="row">
-          <div class="col-lg-12">
-              <div class="text-content">
-                <h4>Posts Details</h4>
-                <?php the_title('<h2>', '</h2>') ?>
-              </div>
-          </div>
+<!-- Banner Starts Here -->
+<section class="page-heading">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="text-content">
+          <h4>Posts Details</h4>
+          <?php the_title('<h2>', '</h2>') ?>
+        </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
- <section class="call-to-action">
+<section class="call-to-action">
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
@@ -38,8 +38,8 @@ get_header();
   </div>
 </section>
 
-    
-        <?php
+
+<?php
         if (have_posts()) :
             while (have_posts()) :
                 the_post();
@@ -52,7 +52,7 @@ get_header();
 
         endif;
         ?>
-    
+
 
 <?php
 get_footer();
