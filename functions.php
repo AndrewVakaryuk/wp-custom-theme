@@ -12,6 +12,20 @@ if (!function_exists('my_theme_setup')) :
         add_theme_support('post-thumbnails');
         add_theme_support('customize-selective-refresh-widgets');
 
+        add_theme_support(
+          'html5',
+          array(
+              'search-form',
+              'comment-form',
+              'comment-list',
+              'video',
+              'gallery',
+              'caption',
+              'style',
+              'script',
+          )
+        );
+
         register_nav_menus(
             array(
                 'header-menu' => esc_html__('Primary', 'my_theme'),
