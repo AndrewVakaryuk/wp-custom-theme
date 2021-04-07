@@ -66,7 +66,7 @@ h1,h2,h3,h4,h5,h6 {
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-image: url(../images/heading-bg.jpg);
+	background-image: url(assets/images/heading-bg.jpg);
 }
 
 .page-heading .text-content h4 {
@@ -772,10 +772,6 @@ ul.page-numbers li a:hover {
 .sidebar .categories ul li a:hover {
 	color: #f48840;
 }
-
-/* .sidebar .tagcloud {
-  background-color: #000;
-} */
 
 .sidebar .tags div {
 	margin-right: 6px;
