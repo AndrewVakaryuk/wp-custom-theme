@@ -985,6 +985,34 @@ footer p a:hover {
 	margin: 0px 5px;
 }
 
+.row-social{
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.row-social ul li{
+  display: inline-block;
+	margin: 0px 5px;
+}
+
+.row-social ul li a {
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	display: inline-block;
+	background-color: #212931;
+	color: #fff;
+	border-radius: 50%;
+	transition: all .3s;
+}
+
+.row-social ul li a:hover {
+	background-color: #f48840;
+}
+
 .about-us ul li a {
 	width: 40px;
 	height: 40px;
