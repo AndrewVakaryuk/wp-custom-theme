@@ -1,0 +1,9 @@
+@import 'home/global';
+@import 'home/call';
+@import 'components/header';
+@import 'components/banner';
+@import 'components/blog-posts';
+@import 'components/sidebar';
+@import 'components/footer';
+@import 'about';
+@import 'media';
