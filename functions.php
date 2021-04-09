@@ -41,7 +41,7 @@ function my_theme_scripts()
 
     wp_enqueue_script(
         'bootstrap',
-        get_template_directory_uri() . '/vendor/bootstrap/js/bootstrap.bundle.min.js',
+        get_template_directory_uri() . '/assets/js/bootstrap.bundle.min.js',
         array('jquery'),
         _S_VERSION,
         true

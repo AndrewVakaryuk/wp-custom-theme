@@ -52,13 +52,15 @@
       </div>
 
       <div class="col-lg-4">
-        <?php get_sidebar() ?>
+        <div class="sidebar">
+          <?php get_sidebar(); ?>
+        </div>
       </div>
 
       <?php comments_template() ?>
       <?php wp_list_comments() ?>
 
-<!-- <div class="col-lg-12">
+      <!-- <div class="col-lg-12">
           <div class="sidebar-item comments">
             <div class="sidebar-heading">
               <h2>4 comments</h2>

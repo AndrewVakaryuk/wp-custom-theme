@@ -45,7 +45,9 @@
         </div>
       </div>
       <div class="col-lg-4">
-        <?php get_sidebar(); ?>
+        <div class="sidebar">
+          <?php get_sidebar(); ?>
+        </div>
       </div>
     </div>
   </div>
