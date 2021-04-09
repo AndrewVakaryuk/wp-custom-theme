@@ -43,6 +43,7 @@
 
           </div>
         </div>
+        <?php the_posts_pagination() ?>
       </div>
       <div class="col-lg-4">
         <div class="sidebar">
